@@ -9,6 +9,7 @@ public class WebDriverFactory {
 
     public static WebDriver getDriver(){
         if(driver == null){
+            System.setProperty("webdriver.chrome.driver","C:\\drivers\\chromedriver.exe");
             driver = new ChromeDriver();
         }
         return driver;
