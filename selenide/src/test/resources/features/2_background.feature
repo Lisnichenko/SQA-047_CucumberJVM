@@ -8,7 +8,7 @@ Feature: When User Add New Record
     Given user is on the angular page
 
   Scenario: Adding apple to the list
-    When user add new task "Apple"
+    When user adds new task "Apple"
     Then "Apple" should appear in the list
     And remove "Apple"
 
@@ -17,3 +17,7 @@ Feature: When User Add New Record
       |Apple|Grape|Peach|
     Then tasks should appear in the list
       |Apple|Grape|Peach|
+
+  Scenario: Adding multiple records to the list passing Collection
+    When user adds new tasks "Apple,Grape,Peach"
+    Then all following tasks should appear in the list "Apple,Grape,Peach"

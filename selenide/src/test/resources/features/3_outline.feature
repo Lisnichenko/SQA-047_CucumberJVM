@@ -4,7 +4,7 @@ Feature: When User Add New Record
 
   Scenario Outline:  Adding apple to the list
     Given user is on the angular page
-    When user add new task "<Task>"
+    When user adds new task "<Task>"
     Then "<Task>" should appear in the list
     And remove "<Task>"
 
@@ -13,3 +13,6 @@ Feature: When User Add New Record
   |Apple|
   |Grape|
   |Peach|
+
+#You can group examples of positive tests and negative tests in different tables
+
