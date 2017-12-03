@@ -1,5 +1,5 @@
 Feature: When User Add New Record
-  As a user I want to add taske to TODO list
+  As a user I want to add task to TODO list
   In order to not forget anything
 
   Scenario Outline:  Adding apple to the list
@@ -8,11 +8,11 @@ Feature: When User Add New Record
     Then "<Task>" should appear in the list
     And remove "<Task>"
 
-  Examples:
-  |Task|
-  |Apple|
-  |Grape|
-  |Peach|
+    Examples:
+      | Task  |
+      | Apple |
+      | Grape |
+      | Peach |
 
 #You can group examples of positive tests and negative tests in different tables
 

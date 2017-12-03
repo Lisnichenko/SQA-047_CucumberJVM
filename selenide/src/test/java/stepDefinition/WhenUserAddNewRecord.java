@@ -59,8 +59,7 @@ public class WhenUserAddNewRecord {
 
     @When("^user adds new task$")
     public void user_adds_new_task(DataTable dataTable) {
-        List<String> data = dataTable.asList(String.class);
-        data.forEach(this::user_adds_new_task);
+        dataTable.asList(String.class).forEach(this::user_adds_new_task);
     }
 
     @Then("^all following tasks should appear in the list \"(.+)\"$")

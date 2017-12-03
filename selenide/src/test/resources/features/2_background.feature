@@ -1,7 +1,6 @@
-
 Feature: When User Add New Record
-    As a user I want to add taske to TODO list
-    In order to not forget anything
+  As a user I want to add task to TODO list
+  In order to not forget anything
 
   # Background is run before each Scenario, but after the BeforeScenario Hooks
   Background: loading the page
@@ -14,9 +13,9 @@ Feature: When User Add New Record
 
   Scenario: Adding multiple records to the list
     When user adds new task
-      |Apple|Grape|Peach|
+      | Apple | Grape | Peach |
     Then tasks should appear in the list
-      |Apple|Grape|Peach|
+      | Apple | Grape | Peach |
 
   Scenario: Adding multiple records to the list passing Collection
     When user adds new tasks "Apple,Grape,Peach"

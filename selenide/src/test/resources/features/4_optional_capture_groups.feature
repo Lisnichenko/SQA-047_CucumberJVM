@@ -1,5 +1,5 @@
 Feature: When User Add New Record
-  As a user I want to add taske to TODO list
+  As a user I want to add task to TODO list
   In order to not forget anything
 
   #optional noncapture
