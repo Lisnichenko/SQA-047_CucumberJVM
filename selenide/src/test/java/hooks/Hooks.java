@@ -6,7 +6,7 @@ import cucumber.api.java.Before;
 
 public class Hooks {
 
-    @Before
+    @Before ("@web")
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver","C:\\drivers\\chromedriver.exe");
         Configuration.timeout=5000L;
