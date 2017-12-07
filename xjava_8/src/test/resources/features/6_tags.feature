@@ -19,7 +19,8 @@ Feature: When User Add New Record
       | Apple | Grape | Tomato |
 
 #  add  required tag to cucummber options
-#  Tags = { "~@wip","~@notImplemented","@sanity" },#   or
+#  Tags = { "~@wip","~@notImplemented","@sanity" },
+#    or
 #  If we want to run the Scenarios which are Tagged sanity and regression both
 #   mvn test -Dcucumber.options="--tags @sanity --tags @regression"
 
