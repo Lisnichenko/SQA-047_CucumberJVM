@@ -1,4 +1,4 @@
-package stepDefinition;
+package stepDefinition_java8;
 
 import cucumber.api.DataTable;
 import cucumber.api.java8.En;

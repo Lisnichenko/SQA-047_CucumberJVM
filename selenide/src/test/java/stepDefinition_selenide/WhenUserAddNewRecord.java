@@ -1,4 +1,4 @@
-package stepDefinition;
+package stepDefinition_selenide;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;

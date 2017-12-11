@@ -1,4 +1,4 @@
-package hooks;
+package stepDefinition_selenide.hooks;
 
 
 import com.codeborne.selenide.Configuration;
@@ -6,7 +6,7 @@ import cucumber.api.java.Before;
 
 public class Hooks {
 
-    @Before ("@web")
+    @Before
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver","C:\\drivers\\chromedriver.exe");
         Configuration.timeout=5000L;

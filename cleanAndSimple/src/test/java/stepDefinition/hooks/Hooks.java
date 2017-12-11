@@ -1,4 +1,4 @@
-package hooks;
+package stepDefinition.hooks;
 
 
 import cucumber.api.java.After;
