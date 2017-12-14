@@ -73,4 +73,32 @@ public class WhenUserAddNewRecord {
         actualItems.add(angularPage.getTasks());
         dataTable.diff(actualItems);
     }
+
+    @When("^user adds tasks$")
+    public void userAddsTasks(DataTable data) {
+        data.asLists(String.class).forEach(r ->
+        {userAddsNewTaskInAmount(r.get(0),
+                Integer.parseInt(r.get(1)));});
+    }
+
+    @Then("^tasks from table appears in the list$")
+    public void taskAppearsInTheList(DataTable data) {
+        data.asLists(String.class).forEach(r ->
+        {taskInAmmountAppearsInTheList(r.get(0),Integer.parseInt(r.get(1)));});
+    }
+
+    @Then("^(.\\w+) in amount (.\\d+) appears in the list$")
+    public void taskInAmmountAppearsInTheList(String task,Integer amount) {
+        assertTrue(angularPage.isItemPresentInList(task + " " + amount));
+    }
+
+    @When("^user adds new task (.\\w+) in amount (\\d+)$")
+    public void userAddsNewTaskInAmount(String task, Integer amount) {
+        angularPage.addTask(task + " " + amount);
+    }
+
+    @When("^user adds new list of tasks \"(.+)\"$")
+    public void userAddsNewListOfTasks(List<String> taskList) {
+            taskList.get(0);
+    }
 }

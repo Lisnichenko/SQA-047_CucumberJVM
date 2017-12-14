@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepDefinition_selenide",
+        tags={},
         plugin = {
                 "pretty",
                 "html:target/cucumber",
